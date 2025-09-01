@@ -3,22 +3,21 @@
 
 function dx = din_prac3(t, x, zfun)
 
-    % ===== Parámetros físicos (tabla de la práctica) =====
-    m1 = 290;        % masa carrocería (1/4 auto) [kg]
-    m2 = 59;         % masa rueda-neumático-eje [kg]
-    b1 = 1000;       % amortiguador [Ns/m]
-    k1 = 16182;      % resorte suspensión [N/m]
-    k2 = 19000;      % resorte llanta [N/m]
-    f  = 0;          % actuador [N]
+    Parametros 
+    m1 = 290;        
+    m2 = 59;         
+    b1 = 1000;       
+    k1 = 16182;      
+    k2 = 19000;      
+    f  = 0;          
 
-    % ===== Estados =====
     x1 = x(1);  
     x2 = x(2);
     v1 = x(3);  
     v2 = x(4);
 
     % ===== Entrada de carretera =====
-    z = zfun(t);     % <- definida en main
+    z = zfun(t);  
 
     % ===== Ecuaciones =====
     a1 = ( -b1*v1 + b1*v2 - k1*x1 + k1*x2 + f ) / m1;
