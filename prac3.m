@@ -3,7 +3,7 @@
 
 function dx = din_prac3(t, x, zfun)
 
-    Parametros 
+    %Parametros 
     m1 = 290;        
     m2 = 59;         
     b1 = 1000;       
@@ -15,8 +15,7 @@ function dx = din_prac3(t, x, zfun)
     x2 = x(2);
     v1 = x(3);  
     v2 = x(4);
-
-    % ===== Entrada de carretera =====
+    
     z = zfun(t);  
 
     % ===== Ecuaciones =====
